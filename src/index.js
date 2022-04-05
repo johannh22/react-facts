@@ -1,11 +1,33 @@
-import React from "react";
+import React from "react";    // Still needed before React 17
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./style.css";
 
-function PrimeiroComponente() {
+function Header() {
+  return (
+    <header>
+      <nav className="nav">
+        <img src="./logo512.png" alt="react-logo" className="nav-logo"/>
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <small>This is a footer.</small>
+    </footer>
+  );
+}
+
+function MainContent() {
   return (
     <div>
-      <img src="./logo512.png" alt="react-logo" width="100px" />
       <h1>Fun facts about React</h1>
       <ul>
         <li>Was first released in 2013</li>
@@ -18,4 +40,14 @@ function PrimeiroComponente() {
   );
 }
 
-ReactDOM.render(<PrimeiroComponente />, document.getElementById("root"));
+function Page() {
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  )
+}
+
+ReactDOM.render(<Page />, document.getElementById("root"));
