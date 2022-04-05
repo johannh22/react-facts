@@ -1,12 +1,12 @@
 :root {
   --blue: #61dafb;
   --black: #21222a;
-  --dark-gray: #282D35;
-  --white: #DEEBF8;
+  --dark-gray: #282d35;
+  --react-white: #deebf8;
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 62.5%;
   margin: 0;
   padding: 0;
@@ -44,5 +44,37 @@
 
 .description {
   font-size: 1.6rem;
-  color: var(--white);
+  color: var(--react-white);
+}
+
+main {
+  background-color: var(--dark-gray);
+  height: 100vh;
+  color: white;
+  padding: 2.7rem;
+  background-image: url("./images/react-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 15%;
+}
+
+.main-title {
+  font-size: 3.9rem;
+  font-weight: 700;
+}
+
+.main-facts {
+  padding-left: 5.1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 46px;
+}
+
+.main-facts > li {
+  line-height: 19px;
+  padding: 1rem 0;
+}
+
+.main-facts > li::marker {
+  color: var(--blue);
+  font-size: 2rem;
 }
